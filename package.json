@@ -1,11 +1,11 @@
 {
-  "name": "array-component",
+  "name": "recursive-component",
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine"
   },
-  "description": "Renders a JavaScript array as an HTML ordered list",
+  "description": "Renders a JSON structure as a recursive combination of HTML ordered lists, definition lists, and spans.",
   "keywords": ["array", "component", "html", "view"],
   "homepage": "https://github.com/andrewshawcare/array-component",
   "bugs": {
