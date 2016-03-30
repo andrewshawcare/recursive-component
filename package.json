@@ -1,0 +1,31 @@
+{
+  "name": "array-component",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "description": "Renders a JavaScript array as an HTML ordered list",
+  "keywords": ["array", "component", "html", "view"],
+  "homepage": "https://github.com/andrewshawcare/array-component",
+  "bugs": {
+    "url": "https://github.com/andrewshawcare/array-component/issues",
+    "email": "andrewshawcare@gmail.com"
+  },
+  "license": "MIT",
+  "author": "Andrew Shaw Care <andrewshawcare@gmail.com> (https://github.com/andrewshawcare)",
+  "repository": "andrewshawcare/array-component",
+  "dependencies": {
+    "serve-static": "^1.10.2",
+    "finalhandler": "^0.4.1",
+    "example-component": "^0.0.1",
+    "get-json": "andrewshawcare/get-json#18cf1b4",
+    "array-component": "andrewshawcare/array-component",
+    "object-component": "andrewshawcare/object-component",
+    "primitive-component": "andrewshawcare/primitive-component"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jsdom": "^8.2.0"
+  }
+}
