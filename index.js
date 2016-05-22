@@ -1,14 +1,37 @@
-RecursiveComponent = function (data) {
-  var recursiveElement = document.createElement("div");
-  recursiveElement.classList.add("recursive");
+/*global define */
+define([
+  "./node_modules/array-component/index",
+  "./node_modules/object-component/index",
+  "./node_modules/primitive-component/index"
+], function (
+  ArrayComponent,
+  ObjectComponent,
+  PrimitiveComponent
+) {
+  return function RecursiveComponent(data) {
+    var data = data || {};
+    var value = data.value || "";
 
-  if (data instanceof Array) {
-      recursiveElement.appendChild(ArrayComponent(data, RecursiveComponent));
-  } else if (data instanceof Object) {
-      recursiveElement.appendChild(ObjectComponent(data, RecursiveComponent));
-  } else {
-      recursiveElement.appendChild(PrimitiveComponent(data, RecursiveComponent));
-  }
+    var recursiveElement = document.createElement("div");
+    recursiveElement.classList.add("recursive");
 
-  return recursiveElement;
-};
+    if (value instanceof Array) {
+        recursiveElement.appendChild(ArrayComponent({
+          array: value,
+          ValueComponent: RecursiveComponent
+        }));
+    } else if (value instanceof Object) {
+        recursiveElement.appendChild(ObjectComponent({
+          object: value,
+          ValueComponent: RecursiveComponent
+        }));
+    } else {
+        recursiveElement.appendChild(PrimitiveComponent({
+          value: value,
+          ValueComponent: RecursiveComponent
+        }));
+    }
+
+    return recursiveElement;
+  };
+});
