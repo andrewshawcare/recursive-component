@@ -16,20 +16,19 @@ define([
     recursiveElement.classList.add("recursive");
 
     if (value instanceof Array) {
-        recursiveElement.appendChild(ArrayComponent({
-          array: value,
-          ValueComponent: RecursiveComponent
-        }));
+      recursiveElement.appendChild(ArrayComponent({
+        array: value,
+        ValueComponent: RecursiveComponent
+      }));
     } else if (value instanceof Object) {
-        recursiveElement.appendChild(ObjectComponent({
-          object: value,
-          ValueComponent: RecursiveComponent
-        }));
+      recursiveElement.appendChild(ObjectComponent({
+        object: value,
+        ValueComponent: RecursiveComponent
+      }));
     } else {
-        recursiveElement.appendChild(PrimitiveComponent({
-          value: value,
-          ValueComponent: RecursiveComponent
-        }));
+      recursiveElement.appendChild(PrimitiveComponent({
+        value: value
+      }));
     }
 
     return recursiveElement;
