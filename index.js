@@ -1,8 +1,8 @@
 /*global define */
 define([
-  "./node_modules/array-component/index",
-  "./node_modules/object-component/index",
-  "./node_modules/primitive-component/index"
+  "node_modules/array-component/index",
+  "node_modules/object-component/index",
+  "node_modules/primitive-component/index"
 ], function (
   ArrayComponent,
   ObjectComponent,
